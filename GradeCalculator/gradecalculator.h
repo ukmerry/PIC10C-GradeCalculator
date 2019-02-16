@@ -15,6 +15,12 @@ public:
     explicit GradeCalculator(QWidget *parent = nullptr);
     ~GradeCalculator();
 
+signals:
+    void compute_overall();
+
+public slots:
+    void update_overall(int);
+
 private:
     Ui::GradeCalculator *ui;
 };

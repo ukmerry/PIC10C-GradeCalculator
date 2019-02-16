@@ -12,3 +12,8 @@ GradeCalculator::~GradeCalculator()
 {
     delete ui;
 }
+
+void GradeCalculator::update_overall(int unused)
+{
+    return;
+}
