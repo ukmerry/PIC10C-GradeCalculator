@@ -20,7 +20,7 @@ signals:
     void compute_overall();
 
 public slots:
-    void update_overall(int);
+    void update_overall(int, int);
 
 private slots:
     void on_spinBox_valueChanged(int arg1);

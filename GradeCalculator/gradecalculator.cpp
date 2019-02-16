@@ -6,16 +6,19 @@ GradeCalculator::GradeCalculator(QWidget *parent) :
     ui(new Ui::GradeCalculator)
 {
     ui->setupUi(this);
+
+    ui->lcdNumber->setPalette(Qt::red);
+
     QObject::connect(ui->spinBox,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall(int)));
+                         this,SLOT(update_overall(int,0)));
     QObject::connect(ui->spinBox_2,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall(int)));
+                         this,SLOT(update_overall(int,1)));
     QObject::connect(ui->spinBox_3,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall(int)));
+                         this,SLOT(update_overall(int,2)));
     QObject::connect(ui->spinBox_4,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall(int)));
+                         this,SLOT(update_overall(int,3)));
     QObject::connect(ui->spinBox_5,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall(int)));
+                         this,SLOT(update_overall(int,4)));
 }
 
 GradeCalculator::~GradeCalculator()
@@ -23,10 +26,9 @@ GradeCalculator::~GradeCalculator()
     delete ui;
 }
 
-void GradeCalculator::update_overall(int result)
+void GradeCalculator::update_overall(int result, int choice)
 {
     ui->lcdNumber->setDigitCount(4);
-    ui->lcdNumber->setPalette(Qt::red);
     ui->lcdNumber->display(result);
     return;
 }
