@@ -2,7 +2,6 @@
 #define GRADECALCULATOR_H
 
 #include <QMainWindow>
-#include <array>
 
 namespace Ui {
 class GradeCalculator;
@@ -20,7 +19,7 @@ signals:
     void compute_overall();
 
 public slots:
-    void update_overall(int);
+    void update_overall();
 
 private slots:
     void on_spinBox_valueChanged(int arg1);
@@ -45,7 +44,6 @@ private slots:
 
 private:
     Ui::GradeCalculator *ui;
-    std::array<int, 5> hw_scores;
 };
 
 #endif // GRADECALCULATOR_H
