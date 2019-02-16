@@ -22,3 +22,8 @@ v1.0 Completed SpinBox and Slider (in sync)
 v1.1 Display the total score of hw
 
 v1.2 Add the Midterm 1 and Final Exam layout to the GUI
+
+v2.0 Complete program following the grade breakdown
+(15% Assignments) + (25% Midterm 1) + (30% Final Exam) + (35% Final Project) = 105%
+
+
