@@ -20,3 +20,5 @@ v1.0 Completed SpinBox and Slider (in sync)
         Stored each hw_scores in an array
         
 v1.1 Display the total score of hw
+
+v1.2 Add the Midterm 1 and Final Exam layout to the GUI
