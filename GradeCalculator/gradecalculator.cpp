@@ -28,13 +28,22 @@ GradeCalculator::~GradeCalculator()
 
 void GradeCalculator::update_overall()
 {
-    double result = ui->spinBox->value()+
-                    ui->spinBox_2->value()+
-                    ui->spinBox_3->value()+
-                    ui->spinBox_4->value()+
-                    ui->spinBox_5->value();
+    double hw_result = ui->spinBox->value()+
+                       ui->spinBox_2->value()+
+                       ui->spinBox_3->value()+
+                       ui->spinBox_4->value()+
+                       ui->spinBox_5->value();
 
-    ui->lcdNumber->display(result/5);
+    double midterm_result = ui->spinBox_6->value();
+    double final_result = ui->spinBox_7->value();
+    double project_result = ui->spinBox_8->value();
+
+    double result = (hw_result/100)*0.15+
+                    midterm_result*0.25+
+                    final_result*0.3+
+                    project_result*0.35;
+
+    ui->lcdNumber->display(result);
     return;
 }
 
