@@ -2,6 +2,7 @@
 #define GRADECALCULATOR_H
 
 #include <QMainWindow>
+#include <array>
 
 namespace Ui {
 class GradeCalculator;
@@ -28,6 +29,7 @@ private slots:
 
 private:
     Ui::GradeCalculator *ui;
+    std::array<int, 5> hw_scores;
 };
 
 #endif // GRADECALCULATOR_H

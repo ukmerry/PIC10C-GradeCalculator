@@ -16,24 +16,29 @@ GradeCalculator::~GradeCalculator()
 void GradeCalculator::on_horizontalSlider_valueChanged(int value)
 {
     ui->spinBox->setValue(value);
+    hw_scores[0] = value;
 }
 
 void GradeCalculator::on_horizontalSlider_2_valueChanged(int value)
 {
     ui->spinBox_2->setValue(value);
+    hw_scores[1] = value;
 }
 
 void GradeCalculator::on_horizontalSlider_3_valueChanged(int value)
 {
     ui->spinBox_3->setValue(value);
+    hw_scores[2] = value;
 }
 
 void GradeCalculator::on_horizontalSlider_4_valueChanged(int value)
 {
     ui->spinBox_4->setValue(value);
+    hw_scores[3] = value;
 }
 
 void GradeCalculator::on_horizontalSlider_5_valueChanged(int value)
 {
     ui->spinBox_5->setValue(value);
+    hw_scores[4] = value;
 }
