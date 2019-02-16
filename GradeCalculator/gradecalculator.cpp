@@ -87,3 +87,33 @@ void GradeCalculator::on_horizontalSlider_5_valueChanged(int value)
 {
     ui->spinBox_5->setValue(value);
 }
+
+void GradeCalculator::on_horizontalSlider_6_valueChanged(int value)
+{
+
+}
+
+void GradeCalculator::on_horizontalSlider_7_valueChanged(int value)
+{
+
+}
+
+void GradeCalculator::on_horizontalSlider_8_valueChanged(int value)
+{
+
+}
+
+void GradeCalculator::on_spinBox_6_valueChanged(int arg1)
+{
+
+}
+
+void GradeCalculator::on_spinBox_7_valueChanged(int arg1)
+{
+
+}
+
+void GradeCalculator::on_spinBox_8_valueChanged(int arg1)
+{
+
+}

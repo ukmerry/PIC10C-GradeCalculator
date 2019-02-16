@@ -42,6 +42,18 @@ private slots:
 
     void on_horizontalSlider_5_valueChanged(int value);
 
+    void on_horizontalSlider_6_valueChanged(int value);
+
+    void on_horizontalSlider_7_valueChanged(int value);
+
+    void on_horizontalSlider_8_valueChanged(int value);
+
+    void on_spinBox_6_valueChanged(int arg1);
+
+    void on_spinBox_7_valueChanged(int arg1);
+
+    void on_spinBox_8_valueChanged(int arg1);
+
 private:
     Ui::GradeCalculator *ui;
 };
