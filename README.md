@@ -15,3 +15,8 @@ There are two grading breakdowns
 # Development Diary
 
 v0.1 First layout of the program (without code)
+
+v1.0 Completed SpinBox and Slider (in sync)
+        Stored each hw_scores in an array
+        
+v1.1 Display the total score of hw
