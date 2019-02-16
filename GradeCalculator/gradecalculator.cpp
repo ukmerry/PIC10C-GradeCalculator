@@ -13,8 +13,11 @@ GradeCalculator::~GradeCalculator()
     delete ui;
 }
 
-void GradeCalculator::update_overall(int unused)
+void GradeCalculator::update_overall(int result)
 {
+    ui->lcdNumber->setDigitCount(4);
+    ui->lcdNumber->setPalette(Qt::red);
+    ui->lcdNumber->display(result);
     return;
 }
 
