@@ -26,4 +26,5 @@ v1.2 Add the Midterm 1 and Final Exam layout to the GUI
 v2.0 Complete program following the grade breakdown
 (15% Assignments) + (25% Midterm 1) + (30% Final Exam) + (35% Final Project) = 105%
 
+v2.1 Bugs Fixed - Calculation goes wrong and midterm, final exam, final project do not display normally
 

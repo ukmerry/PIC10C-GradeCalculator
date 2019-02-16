@@ -19,6 +19,12 @@ GradeCalculator::GradeCalculator(QWidget *parent) :
                          this,SLOT(update_overall()));
     QObject::connect(ui->spinBox_5,SIGNAL(valueChanged(int)),
                          this,SLOT(update_overall()));
+    QObject::connect(ui->spinBox_6,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+    QObject::connect(ui->spinBox_7,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+    QObject::connect(ui->spinBox_8,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
 }
 
 GradeCalculator::~GradeCalculator()
@@ -38,7 +44,7 @@ void GradeCalculator::update_overall()
     double final_result = ui->spinBox_7->value();
     double project_result = ui->spinBox_8->value();
 
-    double result = (hw_result/100)*0.15+
+    double result = hw_result*0.15+
                     midterm_result*0.25+
                     final_result*0.3+
                     project_result*0.35;
