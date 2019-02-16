@@ -6,6 +6,16 @@ GradeCalculator::GradeCalculator(QWidget *parent) :
     ui(new Ui::GradeCalculator)
 {
     ui->setupUi(this);
+    QObject::connect(ui->spinBox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall(int)));
+    QObject::connect(ui->spinBox_2,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall(int)));
+    QObject::connect(ui->spinBox_3,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall(int)));
+    QObject::connect(ui->spinBox_4,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall(int)));
+    QObject::connect(ui->spinBox_5,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall(int)));
 }
 
 GradeCalculator::~GradeCalculator()
