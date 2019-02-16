@@ -38,31 +38,6 @@ void GradeCalculator::update_overall()
     return;
 }
 
-void GradeCalculator::on_spinBox_valueChanged(int arg1)
-{
-    ui->horizontalSlider->setValue(arg1);
-}
-
-void GradeCalculator::on_spinBox_2_valueChanged(int arg1)
-{
-    ui->horizontalSlider_2->setValue(arg1);
-}
-
-void GradeCalculator::on_spinBox_3_valueChanged(int arg1)
-{
-    ui->horizontalSlider_3->setValue(arg1);
-}
-
-void GradeCalculator::on_spinBox_4_valueChanged(int arg1)
-{
-    ui->horizontalSlider_4->setValue(arg1);
-}
-
-void GradeCalculator::on_spinBox_5_valueChanged(int arg1)
-{
-    ui->horizontalSlider_5->setValue(arg1);
-}
-
 void GradeCalculator::on_horizontalSlider_valueChanged(int value)
 {
     ui->spinBox->setValue(value);
@@ -90,30 +65,56 @@ void GradeCalculator::on_horizontalSlider_5_valueChanged(int value)
 
 void GradeCalculator::on_horizontalSlider_6_valueChanged(int value)
 {
-
+    ui->spinBox_6->setValue(value);
 }
 
 void GradeCalculator::on_horizontalSlider_7_valueChanged(int value)
 {
-
+    ui->spinBox_7->setValue(value);
 }
 
 void GradeCalculator::on_horizontalSlider_8_valueChanged(int value)
 {
+    ui->spinBox_8->setValue(value);
+}
 
+
+void GradeCalculator::on_spinBox_valueChanged(int arg1)
+{
+    ui->horizontalSlider->setValue(arg1);
+}
+
+void GradeCalculator::on_spinBox_2_valueChanged(int arg1)
+{
+    ui->horizontalSlider_2->setValue(arg1);
+}
+
+void GradeCalculator::on_spinBox_3_valueChanged(int arg1)
+{
+    ui->horizontalSlider_3->setValue(arg1);
+}
+
+void GradeCalculator::on_spinBox_4_valueChanged(int arg1)
+{
+    ui->horizontalSlider_4->setValue(arg1);
+}
+
+void GradeCalculator::on_spinBox_5_valueChanged(int arg1)
+{
+    ui->horizontalSlider_5->setValue(arg1);
 }
 
 void GradeCalculator::on_spinBox_6_valueChanged(int arg1)
 {
-
+    ui->horizontalSlider_6->setValue(arg1);
 }
 
 void GradeCalculator::on_spinBox_7_valueChanged(int arg1)
 {
-
+    ui->horizontalSlider_7->setValue(arg1);
 }
 
 void GradeCalculator::on_spinBox_8_valueChanged(int arg1)
 {
-
+    ui->horizontalSlider_8->setValue(arg1);
 }
