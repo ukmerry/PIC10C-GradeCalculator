@@ -47,6 +47,47 @@ void GradeCalculator::update_overall()
     return;
 }
 
+void GradeCalculator::on_horizontalSlider_valueChanged(int value)
+{
+    ui->spinBox->setValue(value);
+}
+
+void GradeCalculator::on_horizontalSlider_2_valueChanged(int value)
+{
+    ui->spinBox_2->setValue(value);
+}
+
+void GradeCalculator::on_horizontalSlider_3_valueChanged(int value)
+{
+    ui->spinBox_3->setValue(value);
+}
+
+void GradeCalculator::on_horizontalSlider_4_valueChanged(int value)
+{
+    ui->spinBox_4->setValue(value);
+}
+
+void GradeCalculator::on_horizontalSlider_5_valueChanged(int value)
+{
+    ui->spinBox_5->setValue(value);
+}
+
+void GradeCalculator::on_horizontalSlider_6_valueChanged(int value)
+{
+    ui->spinBox_6->setValue(value);
+}
+
+void GradeCalculator::on_horizontalSlider_7_valueChanged(int value)
+{
+    ui->spinBox_7->setValue(value);
+}
+
+void GradeCalculator::on_horizontalSlider_8_valueChanged(int value)
+{
+    ui->spinBox_8->setValue(value);
+}
+
+
 void GradeCalculator::on_spinBox_valueChanged(int arg1)
 {
     ui->horizontalSlider->setValue(arg1);
@@ -72,27 +113,17 @@ void GradeCalculator::on_spinBox_5_valueChanged(int arg1)
     ui->horizontalSlider_5->setValue(arg1);
 }
 
-void GradeCalculator::on_horizontalSlider_valueChanged(int value)
+void GradeCalculator::on_spinBox_6_valueChanged(int arg1)
 {
-    ui->spinBox->setValue(value);
+    ui->horizontalSlider_6->setValue(arg1);
 }
 
-void GradeCalculator::on_horizontalSlider_2_valueChanged(int value)
+void GradeCalculator::on_spinBox_7_valueChanged(int arg1)
 {
-    ui->spinBox_2->setValue(value);
+    ui->horizontalSlider_7->setValue(arg1);
 }
 
-void GradeCalculator::on_horizontalSlider_3_valueChanged(int value)
+void GradeCalculator::on_spinBox_8_valueChanged(int arg1)
 {
-    ui->spinBox_3->setValue(value);
-}
-
-void GradeCalculator::on_horizontalSlider_4_valueChanged(int value)
-{
-    ui->spinBox_4->setValue(value);
-}
-
-void GradeCalculator::on_horizontalSlider_5_valueChanged(int value)
-{
-    ui->spinBox_5->setValue(value);
+    ui->horizontalSlider_8->setValue(arg1);
 }
