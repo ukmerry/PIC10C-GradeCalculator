@@ -28,3 +28,5 @@ v2.0 Complete program following the grade breakdown
 
 v2.1 Bugs Fixed - Calculation goes wrong and midterm, final exam, final project do not display normally
 
+v2.2 Better implementaion - enhanced the efficiency of calculating the overall grade
+
