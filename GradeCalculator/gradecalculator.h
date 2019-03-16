@@ -16,7 +16,6 @@ public:
     explicit GradeCalculator(QWidget *parent = nullptr);
     ~GradeCalculator();
 
-signals:
     void compute_overall();
 
 public slots:
@@ -34,7 +33,10 @@ private slots:
 
 private:
     Ui::GradeCalculator *ui;
-    std::array<double, 8> scores;
+    std::array<double, 5> hw_scores;
+    double midterm;
+    double final;
+    double project;
     double overall;
 };
 

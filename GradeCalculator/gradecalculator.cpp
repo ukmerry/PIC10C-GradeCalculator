@@ -3,7 +3,7 @@
 
 GradeCalculator::GradeCalculator(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::GradeCalculator), overall(0.0)
+    ui(new Ui::GradeCalculator), midterm(0.0), final(0.0), project(0.0), overall(0.0)
 {
     ui->setupUi(this);
     ui->lcdNumber->setDigitCount(4);
@@ -34,62 +34,84 @@ GradeCalculator::~GradeCalculator()
 
 void GradeCalculator::update_overall()
 {
+    compute_overall();
     ui->lcdNumber->display(overall);
     return;
+}
+
+void GradeCalculator::compute_overall()
+{
+    overall = 0;
+
+    if(ui->radioButton->isChecked())
+    {
+        overall += 0.15*(ui->spinBox->value() +
+                        ui->spinBox_2->value() +
+                        ui->spinBox_3->value() +
+                        ui->spinBox_4->value() +
+                        ui->spinBox_5->value());
+
+        overall += 0.25*ui->spinBox_6->value();
+        overall += 0.30*ui->spinBox_7->value();
+        overall += 0.35*ui->spinBox_8->value();
+    }
+    else if(ui->radioButton_2->isChecked())
+    {
+        overall += 0.15*(ui->spinBox->value() +
+                        ui->spinBox_2->value() +
+                        ui->spinBox_3->value() +
+                        ui->spinBox_4->value() +
+                        ui->spinBox_5->value());
+
+        overall += 0.50*ui->spinBox_7->value();
+        overall += 0.35*ui->spinBox_8->value();
+    }
 }
 
 void GradeCalculator::on_spinBox_valueChanged(int arg1)
 {
     ui->horizontalSlider->setValue(arg1);
-    scores[0] = arg1;
     update_overall();
 }
 
 void GradeCalculator::on_spinBox_2_valueChanged(int arg1)
 {
     ui->horizontalSlider_2->setValue(arg1);
-    scores[1] = arg1;
     update_overall();
 }
 
 void GradeCalculator::on_spinBox_3_valueChanged(int arg1)
 {
     ui->horizontalSlider_3->setValue(arg1);
-    scores[2] = arg1;
     update_overall();
 }
 
 void GradeCalculator::on_spinBox_4_valueChanged(int arg1)
 {
     ui->horizontalSlider_4->setValue(arg1);
-    scores[3] = arg1;
     update_overall();
 }
 
 void GradeCalculator::on_spinBox_5_valueChanged(int arg1)
 {
     ui->horizontalSlider_5->setValue(arg1);
-    scores[4] = arg1;
     update_overall();
 }
 
 void GradeCalculator::on_spinBox_6_valueChanged(int arg1)
 {
     ui->horizontalSlider_6->setValue(arg1);
-    scores[5] = arg1;
     update_overall();
 }
 
 void GradeCalculator::on_spinBox_7_valueChanged(int arg1)
 {
     ui->horizontalSlider_7->setValue(arg1);
-    scores[6] = arg1;
     update_overall();
 }
 
 void GradeCalculator::on_spinBox_8_valueChanged(int arg1)
 {
     ui->horizontalSlider_8->setValue(arg1);
-    scores[7] = arg1;
     update_overall();
 }
