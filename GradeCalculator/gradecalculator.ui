@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_3">
      <widget class="QWidget" name="layoutWidget_2">
@@ -73,7 +73,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <item>
-              <widget class="QSlider" name="horizontalSlider_6">
+              <widget class="QSlider" name="horizontalSlider_midterm1">
                <property name="maximum">
                 <number>100</number>
                </property>
@@ -85,7 +85,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_6">
+            <widget class="QSpinBox" name="spinBox_midterm1">
              <property name="maximum">
               <number>100</number>
              </property>
@@ -109,7 +109,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_8">
              <item>
-              <widget class="QSlider" name="horizontalSlider_7">
+              <widget class="QSlider" name="horizontalSlider_final">
                <property name="maximum">
                 <number>100</number>
                </property>
@@ -121,7 +121,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_7">
+            <widget class="QSpinBox" name="spinBox_final">
              <property name="maximum">
               <number>100</number>
              </property>
@@ -145,7 +145,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_9">
              <item>
-              <widget class="QSlider" name="horizontalSlider_8">
+              <widget class="QSlider" name="horizontalSlider_project">
                <property name="maximum">
                 <number>100</number>
                </property>
@@ -157,7 +157,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_8">
+            <widget class="QSpinBox" name="spinBox_project">
              <property name="maximum">
               <number>100</number>
              </property>
@@ -189,7 +189,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider">
+          <widget class="QSlider" name="horizontalSlider_1">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -199,7 +199,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox">
+          <widget class="QSpinBox" name="spinBox_1">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -347,7 +347,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_35">
              <item>
-              <widget class="QSlider" name="horizontalSlider_33">
+              <widget class="QSlider" name="horiSlider_10B_midterm1">
                <property name="maximum">
                 <number>100</number>
                </property>
@@ -359,7 +359,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_33">
+            <widget class="QSpinBox" name="spinBox_10B_midterm1">
              <property name="maximum">
               <number>100</number>
              </property>
@@ -383,7 +383,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_36">
              <item>
-              <widget class="QSlider" name="horizontalSlider_34">
+              <widget class="QSlider" name="horiSlider_10B_midterm2">
                <property name="maximum">
                 <number>100</number>
                </property>
@@ -395,7 +395,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_34">
+            <widget class="QSpinBox" name="spinBox_10B_midterm_2">
              <property name="maximum">
               <number>100</number>
              </property>
@@ -419,7 +419,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_37">
              <item>
-              <widget class="QSlider" name="horizontalSlider_35">
+              <widget class="QSlider" name="horiSlider_10B_final">
                <property name="maximum">
                 <number>100</number>
                </property>
@@ -431,7 +431,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_35">
+            <widget class="QSpinBox" name="spinBox_10B_final">
              <property name="maximum">
               <number>100</number>
              </property>
@@ -463,7 +463,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_36">
+          <widget class="QSlider" name="horiSlider_10B_1">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -473,7 +473,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_36">
+          <widget class="QSpinBox" name="spinBox_10B_1">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -491,7 +491,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_37">
+          <widget class="QSlider" name="horiSlider_10B_2">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -501,7 +501,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_37">
+          <widget class="QSpinBox" name="spinBox_10B_2">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -519,7 +519,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_38">
+          <widget class="QSlider" name="horiSlider_10B_3">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -529,7 +529,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_38">
+          <widget class="QSpinBox" name="spinBox_10B_3">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -547,7 +547,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_39">
+          <widget class="QSlider" name="horiSlider_10B_4">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -557,7 +557,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_39">
+          <widget class="QSpinBox" name="spinBox_10B_4">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -575,7 +575,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_40">
+          <widget class="QSlider" name="horiSlider_10B_5">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -585,7 +585,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_40">
+          <widget class="QSpinBox" name="spinBox_10B_5">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -603,7 +603,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_44">
+          <widget class="QSlider" name="horiSlider_10B_6">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -613,7 +613,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_44">
+          <widget class="QSpinBox" name="spinBox_10B_6">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -631,7 +631,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_45">
+          <widget class="QSlider" name="horiSlider_10B_7">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -641,7 +641,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_45">
+          <widget class="QSpinBox" name="spinBox_10B_7">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -659,7 +659,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSlider" name="horizontalSlider_46">
+          <widget class="QSlider" name="horiSlider_10B_8">
            <property name="maximum">
             <number>20</number>
            </property>
@@ -669,7 +669,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox_46">
+          <widget class="QSpinBox" name="spinBox_10B_8">
            <property name="maximum">
             <number>20</number>
            </property>
