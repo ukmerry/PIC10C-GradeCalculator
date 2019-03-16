@@ -2,7 +2,6 @@
 #define GRADECALCULATOR_H
 
 #include <QMainWindow>
-#include <array>
 
 namespace Ui {
 class GradeCalculator;
