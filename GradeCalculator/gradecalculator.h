@@ -22,40 +22,6 @@ signals:
 public slots:
     void update_overall();
 
-private slots:
-
-    void on_horizontalSlider_valueChanged(int value);
-
-    void on_horizontalSlider_2_valueChanged(int value);
-
-    void on_horizontalSlider_3_valueChanged(int value);
-
-    void on_horizontalSlider_4_valueChanged(int value);
-
-    void on_horizontalSlider_5_valueChanged(int value);
-
-    void on_horizontalSlider_6_valueChanged(int value);
-
-    void on_horizontalSlider_7_valueChanged(int value);
-
-    void on_horizontalSlider_8_valueChanged(int value);
-
-    void on_spinBox_valueChanged(int arg1);
-
-    void on_spinBox_2_valueChanged(int arg1);
-
-    void on_spinBox_3_valueChanged(int arg1);
-
-    void on_spinBox_4_valueChanged(int arg1);
-
-    void on_spinBox_5_valueChanged(int arg1);
-
-    void on_spinBox_6_valueChanged(int arg1);
-
-    void on_spinBox_7_valueChanged(int arg1);
-
-    void on_spinBox_8_valueChanged(int arg1);
-
 private:
     Ui::GradeCalculator *ui;
     std::array<double, 8> scores;
