@@ -30,3 +30,8 @@ v2.1 Bugs Fixed - Calculation goes wrong and midterm, final exam, final project 
 
 v2.2 Better implementaion - enhanced the efficiency of calculating the overall grade
 
+v3.0 complete features (now can calculate both grading schema ) 
+
+v3.1 now it can handle two coures
+
+v3.2 better implementation for future coding and readibility

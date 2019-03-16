@@ -77,11 +77,15 @@ double GradeCalculator::compute_overall()
 
     if(ui->comboBox->currentIndex() == 0)
     {
-        overall += 0.15*(ui->spinBox_1->value() +
-                        ui->spinBox_2->value() +
-                        ui->spinBox_3->value() +
-                        ui->spinBox_4->value() +
-                        ui->spinBox_5->value());
+        double hw_ratio = 0.15;
+        int hw_number = 5;
+        hw_ratio = (hw_ratio/hw_number)*5; //calculate the partial ratio of each homework
+
+        overall += hw_ratio*(ui->spinBox_1->value() +
+                             ui->spinBox_2->value() +
+                             ui->spinBox_3->value() +
+                             ui->spinBox_4->value() +
+                             ui->spinBox_5->value());
 
         if(ui->radioButton->isChecked())
         {
@@ -97,14 +101,18 @@ double GradeCalculator::compute_overall()
     }
     else if(ui->comboBox->currentIndex() == 1)
     {
-        overall += 0.15625*(ui->spinBox_10B_1->value() +
-                         ui->spinBox_10B_2->value() +
-                         ui->spinBox_10B_3->value() +
-                         ui->spinBox_10B_4->value() +
-                         ui->spinBox_10B_5->value() +
-                         ui->spinBox_10B_6->value() +
-                         ui->spinBox_10B_7->value() +
-                         ui->spinBox_10B_8->value());
+        double hw_ratio = 0.25;
+        int hw_number = 8;
+        hw_ratio = (hw_ratio/hw_number)*5;
+
+        overall += hw_ratio*(ui->spinBox_10B_1->value() +
+                             ui->spinBox_10B_2->value() +
+                             ui->spinBox_10B_3->value() +
+                             ui->spinBox_10B_4->value() +
+                             ui->spinBox_10B_5->value() +
+                             ui->spinBox_10B_6->value() +
+                             ui->spinBox_10B_7->value() +
+                             ui->spinBox_10B_8->value());
 
         if(ui->radioButton->isChecked())
         {
@@ -123,6 +131,10 @@ double GradeCalculator::compute_overall()
         }
     }
 
+    if(overall >= 60)
+        ui->lcdNumber->setPalette(Qt::green);
+    else
+        ui->lcdNumber->setPalette(Qt::red);
 
     return overall;
 }
