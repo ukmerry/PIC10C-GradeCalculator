@@ -1,6 +1,5 @@
 #include "gradecalculator.h"
 #include "ui_gradecalculator.h"
-#include <cmath>
 
 GradeCalculator::GradeCalculator(QWidget *parent) :
     QMainWindow(parent),
