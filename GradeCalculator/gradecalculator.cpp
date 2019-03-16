@@ -1,5 +1,6 @@
 #include "gradecalculator.h"
 #include "ui_gradecalculator.h"
+#include <cmath>
 
 GradeCalculator::GradeCalculator(QWidget *parent) :
     QMainWindow(parent),
@@ -30,6 +31,28 @@ GradeCalculator::GradeCalculator(QWidget *parent) :
     QObject::connect(ui->horizontalSlider_project,SIGNAL(valueChanged(int)),
                          ui->spinBox_project, SLOT(setValue(int)));
 
+    QObject::connect(ui->horiSlider_10B_1,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_1, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_2,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_2, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_3,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_3, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_4,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_4, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_5,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_5, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_6,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_6, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_7,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_7, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_8,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_8, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_midterm1,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_midterm1, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_midterm2,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_midterm2, SLOT(setValue(int)));
+    QObject::connect(ui->horiSlider_10B_final,SIGNAL(valueChanged(int)),
+                         ui->spinBox_10B_final, SLOT(setValue(int)));
 
     QObject::connect(ui->radioButton, SIGNAL(clicked()),
                          this, SLOT(update_overall()));
@@ -53,7 +76,7 @@ double GradeCalculator::compute_overall()
 {
     double overall = 0.0;
 
-    if(ui->radioButton->isChecked())
+    if(ui->comboBox->currentIndex() == 0)
     {
         overall += 0.15*(ui->spinBox_1->value() +
                         ui->spinBox_2->value() +
@@ -61,21 +84,46 @@ double GradeCalculator::compute_overall()
                         ui->spinBox_4->value() +
                         ui->spinBox_5->value());
 
-        overall += 0.25*ui->spinBox_midterm1->value();
-        overall += 0.30*ui->spinBox_final->value();
-        overall += 0.35*ui->spinBox_project->value();
+        if(ui->radioButton->isChecked())
+        {
+            overall += 0.25*ui->spinBox_midterm1->value();
+            overall += 0.30*ui->spinBox_final->value();
+            overall += 0.35*ui->spinBox_project->value();
+        }
+        else if(ui->radioButton_2->isChecked())
+        {
+            overall += 0.50*ui->spinBox_final->value();
+            overall += 0.35*ui->spinBox_project->value();
+        }
     }
-    else if(ui->radioButton_2->isChecked())
+    else if(ui->comboBox->currentIndex() == 1)
     {
-        overall += 0.15*(ui->spinBox_1->value() +
-                        ui->spinBox_2->value() +
-                        ui->spinBox_3->value() +
-                        ui->spinBox_4->value() +
-                        ui->spinBox_5->value());
+        overall += 0.15625*(ui->spinBox_10B_1->value() +
+                         ui->spinBox_10B_2->value() +
+                         ui->spinBox_10B_3->value() +
+                         ui->spinBox_10B_4->value() +
+                         ui->spinBox_10B_5->value() +
+                         ui->spinBox_10B_6->value() +
+                         ui->spinBox_10B_7->value() +
+                         ui->spinBox_10B_8->value());
 
-        overall += 0.50*ui->spinBox_final->value();
-        overall += 0.35*ui->spinBox_project->value();
+        if(ui->radioButton->isChecked())
+        {
+            overall += 0.20*ui->spinBox_10B_midterm1->value();
+            overall += 0.20*ui->spinBox_10B_midterm2->value();
+            overall += 0.35*ui->spinBox_10B_final->value();
+        }
+        else if(ui->radioButton_2->isChecked())
+        {
+            if(ui->spinBox_10B_midterm1->value() > ui->spinBox_10B_midterm2->value())
+                overall += 0.30*ui->spinBox_10B_midterm1->value();
+            else
+                overall += 0.30*ui->spinBox_10B_midterm2->value();
+
+            overall += 0.45*ui->spinBox_10B_final->value();
+        }
     }
+
 
     return overall;
 }
@@ -125,5 +173,71 @@ void GradeCalculator::on_spinBox_final_valueChanged(int arg1)
 void GradeCalculator::on_spinBox_project_valueChanged(int arg1)
 {
     ui->horizontalSlider_project->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_1_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_1->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_2_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_2->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_3_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_3->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_4_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_4->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_5_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_5->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_6_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_6->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_7_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_7->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_8_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_8->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_midterm1_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_midterm1->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_midterm2_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_midterm2->setValue(arg1);
+    update_overall();
+}
+
+void GradeCalculator::on_spinBox_10B_final_valueChanged(int arg1)
+{
+    ui->horiSlider_10B_final->setValue(arg1);
     update_overall();
 }

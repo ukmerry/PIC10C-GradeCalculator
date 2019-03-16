@@ -31,6 +31,18 @@ private slots:
     void on_spinBox_final_valueChanged(int arg1);
     void on_spinBox_project_valueChanged(int arg1);
 
+    void on_spinBox_10B_1_valueChanged(int arg1);
+    void on_spinBox_10B_2_valueChanged(int arg1);
+    void on_spinBox_10B_3_valueChanged(int arg1);
+    void on_spinBox_10B_4_valueChanged(int arg1);
+    void on_spinBox_10B_5_valueChanged(int arg1);
+    void on_spinBox_10B_6_valueChanged(int arg1);
+    void on_spinBox_10B_7_valueChanged(int arg1);
+    void on_spinBox_10B_8_valueChanged(int arg1);
+    void on_spinBox_10B_midterm1_valueChanged(int arg1);
+    void on_spinBox_10B_midterm2_valueChanged(int arg1);
+    void on_spinBox_10B_final_valueChanged(int arg1);
+
 private:
     Ui::GradeCalculator *ui;
 };
