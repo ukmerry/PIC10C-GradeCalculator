@@ -3,7 +3,7 @@
 
 GradeCalculator::GradeCalculator(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::GradeCalculator), midterm(0.0), final(0.0), project(0.0), overall(0.0)
+    ui(new Ui::GradeCalculator)
 {
     ui->setupUi(this);
     ui->lcdNumber->setDigitCount(4);
@@ -25,6 +25,12 @@ GradeCalculator::GradeCalculator(QWidget *parent) :
                          ui->spinBox_7, SLOT(setValue(int)));
     QObject::connect(ui->horizontalSlider_8,SIGNAL(valueChanged(int)),
                          ui->spinBox_8, SLOT(setValue(int)));
+
+    QObject::connect(ui->radioButton, SIGNAL(clicked()),
+                         this, SLOT(update_overall()));
+    QObject::connect(ui->radioButton_2, SIGNAL(clicked()),
+                         this, SLOT(update_overall()));
+
 }
 
 GradeCalculator::~GradeCalculator()
@@ -34,14 +40,13 @@ GradeCalculator::~GradeCalculator()
 
 void GradeCalculator::update_overall()
 {
-    compute_overall();
-    ui->lcdNumber->display(overall);
+    ui->lcdNumber->display(compute_overall());
     return;
 }
 
-void GradeCalculator::compute_overall()
+double GradeCalculator::compute_overall()
 {
-    overall = 0;
+    double overall = 0.0;
 
     if(ui->radioButton->isChecked())
     {
@@ -66,6 +71,8 @@ void GradeCalculator::compute_overall()
         overall += 0.50*ui->spinBox_7->value();
         overall += 0.35*ui->spinBox_8->value();
     }
+
+    return overall;
 }
 
 void GradeCalculator::on_spinBox_valueChanged(int arg1)
