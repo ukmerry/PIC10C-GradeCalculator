@@ -35,3 +35,7 @@ v3.0 complete features (now can calculate both grading schema )
 v3.1 now it can handle two coures
 
 v3.2 better implementation for future coding and readibility
+
+# Guide
+
+
