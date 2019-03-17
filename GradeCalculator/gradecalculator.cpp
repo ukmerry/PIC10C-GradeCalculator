@@ -12,6 +12,8 @@ GradeCalculator::GradeCalculator(QWidget *parent) :
 
     QObject::connect(ui->comboBox, SIGNAL(currentIndexChanged(int)),
                          ui->stackedWidget, SLOT(setCurrentIndex(int)));
+    QObject::connect(ui->comboBox, SIGNAL(currentIndexChanged(int)),
+                         this, SLOT(update_overall()));
 
     QObject::connect(ui->horizontalSlider_1,SIGNAL(valueChanged(int)),
                          ui->spinBox_1, SLOT(setValue(int)));
