@@ -37,5 +37,9 @@ v3.1 now it can handle two coures
 v3.2 better implementation for future coding and readibility
 
 # Guide
+Codes are mainly done in [this](GradeCalculator/gradecalculator.cpp) and [this](GradeCalculator/gradecalculator.h).
+Please see these two files.
 
+# Sample
+![]()
 
