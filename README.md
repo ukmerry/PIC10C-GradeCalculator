@@ -38,8 +38,11 @@ v3.2 better implementation for future coding and readibility
 
 # Guide
 Codes are mainly done in [this](GradeCalculator/gradecalculator.cpp) and [this](GradeCalculator/gradecalculator.h).
-Please see these two files.
+Please see these two files if you are seeing this in webpage.
+Otherwise, you should go to the GradeCalculator file to find those two files
+
+If you are using Windows, you can click the shortcut to run the program(download the entire repository to run the program)
 
 # Sample
-![]()
+![](Capture.PNG)
 
