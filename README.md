@@ -1,3 +1,11 @@
+# My Other Repository
+Please go check them out
+Final Project: https://github.com/ukmerry/PI0C-Final-Project.git
+\
+Assigment 2: https://github.com/ukmerry/PIC10C-GradeCalculator.git
+\
+Assigment 1: https://github.com/ukmerry/PIC-10C-Assignment1.git
+
 # PIC10C-GradeCalculator
 
 This project aims to design and implement a Qt Graphical User Interface that computes the grade of a student given a set of homework and exam scores. In this program, we particually calculate the overall grade of PIC10C.
