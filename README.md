@@ -2,7 +2,7 @@
 Please go check them out
 Final Project: https://github.com/ukmerry/PI0C-Final-Project.git
 \
-Assigment 2: https://github.com/ukmerry/PIC10C-GradeCalculator.git
+Assigment 3: https://github.com/ukmerry/PIC10C-Assignment-3.git
 \
 Assigment 1: https://github.com/ukmerry/PIC-10C-Assignment1.git
 
